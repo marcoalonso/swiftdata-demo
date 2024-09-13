@@ -29,12 +29,15 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Videos in Bootcamp Mx iOS")
+            .navigationDestination(for: Video.self, destination: { video in
+                UpdateView(video: video)
+            })
             .toolbar {
                 ToolbarItem {
                     Button {
                         withAnimation {
                             let newVideo = Video(id: .init(),
-                                                 title: "Spenses Report",
+                                                 title: "Video de prueba",
                                                  metadata: .init(isFavorite: true))
                             modelContext.insert(newVideo)
                         }
