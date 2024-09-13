@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct TodoListSwiftBetaApp: App {
@@ -13,5 +14,7 @@ struct TodoListSwiftBetaApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Video.self,
+                              Metadata.self])
     }
 }

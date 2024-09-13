@@ -11,6 +11,7 @@
 		6C43F66E2C94A4E0007BFB39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43F66D2C94A4E0007BFB39 /* ContentView.swift */; };
 		6C43F6702C94A4E2007BFB39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C43F66F2C94A4E2007BFB39 /* Assets.xcassets */; };
 		6C43F6732C94A4E2007BFB39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C43F6722C94A4E2007BFB39 /* Preview Assets.xcassets */; };
+		6C43F67B2C94A4F5007BFB39 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43F67A2C94A4F5007BFB39 /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6C43F66D2C94A4E0007BFB39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6C43F66F2C94A4E2007BFB39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C43F6722C94A4E2007BFB39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6C43F67A2C94A4F5007BFB39 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		6C43F66A2C94A4E0007BFB39 /* TodoListSwiftBeta */ = {
 			isa = PBXGroup;
 			children = (
+				6C43F6792C94A4EC007BFB39 /* Model */,
 				6C43F66B2C94A4E0007BFB39 /* TodoListSwiftBetaApp.swift */,
 				6C43F66D2C94A4E0007BFB39 /* ContentView.swift */,
 				6C43F66F2C94A4E2007BFB39 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				6C43F6722C94A4E2007BFB39 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6C43F6792C94A4EC007BFB39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C43F67A2C94A4F5007BFB39 /* Video.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C43F66E2C94A4E0007BFB39 /* ContentView.swift in Sources */,
+				6C43F67B2C94A4F5007BFB39 /* Video.swift in Sources */,
 				6C43F66C2C94A4E0007BFB39 /* TodoListSwiftBetaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
