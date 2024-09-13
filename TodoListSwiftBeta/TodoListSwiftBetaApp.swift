@@ -13,8 +13,9 @@ struct TodoListSwiftBetaApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ViewModel())
         }
-        .modelContainer(for: [Video.self,
-                              Metadata.self])
+        //.modelContainer(for: [Video.self, Metadata.self])
+        
     }
 }

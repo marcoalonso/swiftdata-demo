@@ -10,13 +10,21 @@ import SwiftData
 
 struct ContentView: View {
     /// * Añadir la propiedad que da acceso al contexto
-    @Environment(\.modelContext) var modelContext
-    @Query(sort: \Video.title) var videos: [Video]
+    // @Environment(\.modelContext) var modelContext
+    // @Query(sort: \Video.title) var videos: [Video] // Select * from
+    
+    /// To search only specific elements
+     /*
+    @Query(filter: #Predicate<Video> { video in
+        video.title == "SwiftUI"
+    }) var videos: [Video]
+      */
+    @Environment(ViewModel.self) var viewModel
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(videos) { video in
+                ForEach(viewModel.videos) { video in
                     NavigationLink(value: video) {
                         HStack {
                             Text(video.title)
@@ -39,7 +47,8 @@ struct ContentView: View {
                             let newVideo = Video(id: .init(),
                                                  title: "Video de prueba",
                                                  metadata: .init(isFavorite: true))
-                            modelContext.insert(newVideo)
+                            // modelContext.insert(newVideo)
+                            viewModel.insert(video: newVideo)
                         }
                     } label: {
                         Label("Add Video", systemImage: "plus")
@@ -49,16 +58,19 @@ struct ContentView: View {
                 ToolbarItem {
                     Button {
                         withAnimation {
-                            videos.forEach {
+                            /*viewModel.videos.forEach {
                                 modelContext.delete($0)
                             }
-                            try? modelContext.save()
+                            try? modelContext.save()*/
+                            viewModel.deleteAllVideos()
                         }
                     } label: {
                         Label("Remove All", systemImage: "trash")
                     }
-
                 }
+            }
+            .onAppear{
+                viewModel.getVideos()
             }
         }
         
