@@ -43,6 +43,19 @@ struct ContentView: View {
                     }
 
                 }
+                ToolbarItem {
+                    Button {
+                        withAnimation {
+                            videos.forEach {
+                                modelContext.delete($0)
+                            }
+                            try? modelContext.save()
+                        }
+                    } label: {
+                        Label("Remove All", systemImage: "trash")
+                    }
+
+                }
             }
         }
         
